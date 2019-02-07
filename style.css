@@ -3,62 +3,21 @@
  * If a theme's editor style specifies the same classname, these may be overwritten. 
  */
 
+/**
+ * Please note that these styles will be loaded before editor styles.
+ * If a theme's editor style specifies the same classname, these may be overwritten. 
+ */
+
 .is-style-irregular-cover {
-	align-items: center;
-	justify-content: left;
 	background-color: #000;
 	background-size: 50% auto;
 	background-position: center center;
 	background-repeat: no-repeat;
-	margin-top: 0;
-	margin-bottom: 0;
-	padding: 16px;
-	position: relative;
-	z-index: 0; 
 }
 
-.is-style-irregular-cover h2,
-.is-style-irregular-cover .wp-block-cover-text,
-.is-style-irregular-cover .wp-block-cover-image-text {
-	margin: 0 auto;
-	padding: 0;
-	width: 100%;
-	font-size: 42px;
-	font-weight: normal;
-	line-height: 51px;
-	max-width: 100%; 
-}
-
-.is-style-irregular-cover.alignwide {
-	border: none;
-	padding: 16px; 
-}
-
-.is-style-irregular-cover.alignfull {
-	border: none;
-	min-height: 100vh;
-	align-items: center;
-	justify-content: left;
-	background-size: 50% auto;
-	background-position: 100% 40%;
-	background-repeat: no-repeat;
-	margin-top: 0;
-	margin-bottom: 0;
-	padding: 0;
-	position: relative;
-	z-index: 0; 
-}
-
-.is-style-irregular-cover.alignfull h2,
-.is-style-irregular-cover.alignfull .wp-block-cover-text {
-	margin: 0 auto;
-	max-width: 100%;
-	padding: 0 16px;
-	width: 100%; 
-}
-
-.is-style-irregular-cover.alignleft, 
-.is-style-irregular-cover.alignright {
-	display: flex;
-	margin-bottom: 16px; 
+@media screen and (min-width: 480px) {
+	.is-style-irregular-cover {
+			background-size: auto 60%;
+			background-position: 90% 0;
+	}
 }
