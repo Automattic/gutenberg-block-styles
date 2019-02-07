@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository is meant to be an introduction to one of the simplest forms of customization in the editor: Block Styles. Block styles just add an extra classname to a block, so they're relatively simple to create and customize. 
+This repository is meant to be an introduction to one of the simplest forms of customization in the editor: Block Styles. Block Styles just add an extra classname to a block, so they're relatively simple to create and customize. 
 
 ![Block Styles Example](https://cldup.com/xpyaqSiB3h-3000x3000.png)
 
