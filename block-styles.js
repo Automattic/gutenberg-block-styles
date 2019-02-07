@@ -1,6 +1,6 @@
 /**
- * Specify the block you'd like to style. 
- * Duplicate this block for each style variation you'd like.
+ * Declare the block you'd like to style. 
+ * Duplicate and customize the four lines below for each style variation you'd like to add.
  */
 
 wp.blocks.registerBlockStyle( 'core/paragraph', {
