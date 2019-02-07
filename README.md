@@ -24,7 +24,7 @@ This is the simplest approach. Just download a zip file of this repository, and 
 
 ### Or, spin up a quick development environment. 
 	
-This is 100% optional. If you're up for it, you just need to install [Docker CE](https://hub.docker.com/search/?type=edition&offering=community). Then, from your Terminal, clone this repository:
+This is 100% optional. If you're up for it, you first need to install [Docker CE](https://hub.docker.com/search/?type=edition&offering=community). Then, from your Terminal, clone this repository:
 
 ```
 git clone git@github.com:kjellr/gutenberg-block-styles.git
