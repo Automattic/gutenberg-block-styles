@@ -71,7 +71,7 @@ For example, the built-in example adds a "Blue Paragraph" block style to the cor
 ```
 wp.blocks.registerBlockStyle( 'core/paragraph', {
 	name: 'blue-paragraph',
-	label: 'Blue Paragrap
+	label: 'Blue Paragraph'
 } );
 ```
 
