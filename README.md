@@ -64,7 +64,7 @@ Once the plugin is active, open up a new post using the Block editor. You should
 
 Adding + editing block styles is a three step process: 
 
-1. Open up the `block-styles.js` file and adjust the block type, name, and label for your new block style: 
+**1. Open up the `block-styles.js` file and adjust the block type, name, and label for your new block style.**
 
 For example, the built-in example adds a "Blue Paragraph" block style to the core Paragraph block: 
 
@@ -88,7 +88,7 @@ Those four lines are all you need to declare the new block style. The block name
 
 If you'd like to add multiple block styles in the same plugin, just duplicate those four lines.
 
-2. From there, add the CSS to style your new block style. 
+**2. From there, add the CSS to style your new block style.**
 
 Block style classnames are automatically created using the following format: 
 
@@ -101,7 +101,7 @@ Block style classnames are automatically created using the following format:
 
 Open up the `style.css` file, and add any CSS styles for your block. Anything you declare should be added to both the front and back end automatically.
 
-3. Test your changes. 
+**3. Test your changes.**
 
 ZIP up the plugin with your changes and upload to your site, or view the changes in real-time on the Docker-powered dev environment outlined above. 🎉
 
