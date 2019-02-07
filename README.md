@@ -1,27 +1,20 @@
 # Gutenberg Block Styles Plugin
 
-Developing for WordPress's block editor can sometimes be a little intimidating: It requires some light javascript and dev tooling knowledge to get started. This repository is meant to be an introuction to one of the simplest forms of customization in the editor: Block Styles. Block styles just add an extra classname to a block, so they're relatively simple to create and customize. 
-
-All you really need to get started here is: 
-
-- The courage to edit a few lines in a single javascript file. 
-- Knowledge of CSS.
-
-(Optionally, you can run a single Terminal command to create a quick development environment too.)  
-
----
-
 ## Overview
 
-This repository contains a simple example of a WordPress plugin that includes a single block style. 
+This repository is meant to be an introuction to one of the simplest forms of customization in the editor: Block Styles. Block styles just add an extra classname to a block, so they're relatively simple to create and customize. 
 
-![Image of the example "Blue Paragraph" block style.](https://cldup.com/8_Y_9ypKSK-3000x3000.png)
+This repository is a WordPress plugin that includes a single custom block style. It's fairly barebones, and is meant to provide a boilerplate for more complicated plugins. The code here is a lightweight introduction to Gutenberg block customization, and doesn't require you to mess around with `npm`, themes, php, or (much) JavaScript. 
 
-The plugin is fairly simple, and is meant to provide a boilerplate for more complicated plugins. 
+All you really need to get started is: 
+
+- The courage to edit a few lines in a single JavaScript file. 
+- Knowledge of CSS.
+- A WordPress site to upload this plugin to (Alternatively, you can run a single Terminal command to create a quick development environment instead).  
 
 ## Usage
 
-To test this out, you have two options: 
+To try this plugin out, you have two options: 
 
 ### Install this plugin on your existing WordPress site.
 
