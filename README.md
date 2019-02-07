@@ -4,6 +4,8 @@
 
 This repository is meant to be an introuction to one of the simplest forms of customization in the editor: Block Styles. Block styles just add an extra classname to a block, so they're relatively simple to create and customize. 
 
+![Block Styles Example](https://cldup.com/xpyaqSiB3h-3000x3000.png)
+
 This repository is a WordPress plugin that includes a single custom block style. It's fairly barebones, and is meant to provide a boilerplate for more complicated plugins. The code here is a lightweight introduction to Gutenberg block customization, and doesn't require you to mess around with `npm`, themes, php, or (much) JavaScript. 
 
 All you really need to get started is: 
