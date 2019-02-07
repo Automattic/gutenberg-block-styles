@@ -28,7 +28,7 @@ In your Terminal, clone this repository:
 
 ```
 git clone git@github.com:kjellr/gutenberg-block-styles.git
-cd gutenberg-examples 
+cd gutenberg-block-styles
 ```
 
 Then, run this command to start the included development environment: 
