@@ -49,7 +49,7 @@ docker-compose stop
 
 (This simple environment setup was borrowed from the [gutenberg-examples](https://github.com/WordPress/gutenberg-examples) repo. Check that out for more detailed development examples! 🚀)
 
-### Activate the Plugin
+### Activate the plugin.
 
 Once the plugin is active, open up a new post using the Block editor. You should see a new Block Style added to the Paragraph blocks, called "Blue Paragraph": 
 
