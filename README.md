@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository is meant to be an introduction to one of the simplest forms of customization in the editor: Block Styles. Block Styles just add an extra classname to a block, so they're relatively simple to create and customize. 
+This repository is an introduction to one of the simplest forms of customization in the editor: Block Styles. Block Styles just add an extra classname to a block, so they're relatively simple to create and customize. 
 
 ![Block Styles Example](https://cldup.com/xpyaqSiB3h-3000x3000.png)
 
@@ -13,45 +13,6 @@ All you really need to get started is:
 - The courage to edit a few lines in a single JavaScript file. 
 - Knowledge of CSS.
 - A WordPress site to upload this plugin to (Alternatively, you can run a single Terminal command to create a quick development environment instead).  
-
-## Usage
-
-To try this plugin out, you have two options: 
-
-### Install this plugin on your existing WordPress site.
-
-This is the simplest approach. Just download a zip file of this repository, and upload it to your site as a plugin. Hit "Activate" and you're all set. 👏
-
-### Or, spin up a quick development environment. 
-	
-This is 100% optional. If you're up for it, you first need to install [Docker CE](https://hub.docker.com/search/?type=edition&offering=community). Then, from your Terminal, clone this repository:
-
-```
-git clone git@github.com:kjellr/gutenberg-block-styles.git
-cd gutenberg-block-styles
-```
-
-Then, run this command to start the included development environment: 
-
-```
-docker-compose up -d
-```
-
-Once that command completes, you should be able to visit `http://localhost:9999/` to set up a brand new WordPress site for testing. The plugin will be automatically installed. You may need to visit the Plugins page in WP-Admin and activate the "Gutenberg Block Styles" plugin after installation. 
-
-To stop the dev environment later on, just run: 
-
-```
-docker-compose stop
-```
-
-(This simple environment setup was borrowed from the [gutenberg-examples](https://github.com/WordPress/gutenberg-examples) repo. Check that out for more detailed development examples! 🚀)
-
-### Activate the plugin.
-
-Once the plugin is active, open up a new post using the Block editor. You should see a new Block Style added to the Paragraph blocks, called "Blue Paragraph": 
-
-![Image of the "Blue Paragraph" Block Style](https://cldup.com/8_Y_9ypKSK-3000x3000.png)
 
 ## Customization
 
@@ -96,7 +57,7 @@ Open up the `style.css` file, and add any CSS styles for your block. Anything yo
 
 **3. Test your changes.**
 
-ZIP up the plugin with your changes and upload to your site, or view the changes in real-time on the Docker-powered dev environment outlined above. 🎉
+Zip up the plugin with your changes and upload to your site, or if you'd prefer, test the changes in real-time using the included [Docker-powered dev environment](DOCKER.md). 🎉
 
 ## Questions? 
 
