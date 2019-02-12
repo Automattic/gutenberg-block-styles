@@ -13,7 +13,7 @@
  */
 function block_styles_enqueue_javascript() {
 	wp_enqueue_script( 'block-styles-script',
-		plugins_url( 'block-styles.js', __FILE__ ),
+		plugins_url( 'block.js', __FILE__ ),
 		array( 'wp-blocks')
 	);
 }
