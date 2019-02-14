@@ -3,8 +3,22 @@
  * If a theme's editor style specifies the same classname, these may be overwritten. 
  */
 
-.is-style-blue-paragraph {
-	background-color: #0087be;
-	color: #FFF;
-	padding: 16px;
+.is-style-rotating-cover .wp-block-cover-text {
+	animation: cover-rotation 2s infinite linear;
+}
+
+.wp-block[data-type="core/cover"].is-selected .is-style-rotating-cover .wp-block-cover-text {
+	animation: none;
+}
+
+@keyframes cover-rotation {
+	0% {
+		transform: rotate(0deg) scale(0,0);
+	}
+	50% {
+		transform: rotate(144deg) scale(3,3);
+	}
+	100% {
+		transform: rotate(359deg) scale(0,0);
+	}
 }
