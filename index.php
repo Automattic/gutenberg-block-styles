@@ -2,7 +2,7 @@
 
 /**
  * Plugin Name: Gutenberg Block Styles
- * Plugin URI: https://github.com/kjellr/gutenberg-block-styles/
+ * Plugin URI: https://github.com/Automattic/gutenberg-block-styles/
  * Description: A simple plugin to demonstrate how to add block styles to Gutenberg.
  * Version: 1.0
  * Author: Kjell Reigstad
