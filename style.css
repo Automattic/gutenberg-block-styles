@@ -3,11 +3,11 @@
  * If a theme's editor style specifies the same classname, these may be overwritten. 
  */
 
-.is-style-rotating-cover .wp-block-cover-text {
+.is-style-rotating-cover .wp-block-cover__inner-container {
 	animation: cover-rotation 2s infinite linear;
 }
 
-.wp-block[data-type="core/cover"].is-selected .is-style-rotating-cover .wp-block-cover-text {
+.wp-block[data-type="core/cover"].is-selected .is-style-rotating-cover .wp-block-cover__inner-container {
 	animation: none;
 }
 
