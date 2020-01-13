@@ -3,11 +3,6 @@
  * If a theme's editor style specifies the same classname, these may be overwritten. 
  */
 
-/**
- * Please note that these styles will be loaded before editor styles.
- * If a theme's editor style specifies the same classname, these may be overwritten. 
- */
-
 .is-style-irregular-cover {
 	background-color: #000;
 	background-size: 50% auto;
