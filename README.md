@@ -14,7 +14,7 @@ This repository is a WordPress plugin that includes a single custom block style.
 
 All you really need to get started is: 
 
-- The courage to edit a few lines in a single JavaScript file. 
+- The courage to edit a few lines in a single PHP file. 
 - Knowledge of CSS.
 - A WordPress site to upload this plugin to (Alternatively, you can run a single Terminal command to create a quick development environment instead).  
 
@@ -22,29 +22,37 @@ All you really need to get started is:
 
 Adding + editing block styles is a three step process: 
 
-**1. Open up the `block-styles.js` file and adjust the block type, name, and label for your new block style.**
+**1. Open up the `index.php` file and adjust the block type, name, and label for your new block style.**
 
 For example, the built-in example adds a "Blue Paragraph" block style to the core Paragraph block: 
 
 ```
-wp.blocks.registerBlockStyle( 'core/paragraph', {
-	name: 'blue-paragraph',
-	label: 'Blue Paragraph'
-} );
+register_block_style(
+	'core/paragraph',
+	array(
+		'name'			=> 'blue-paragraph',
+		'label'			=> 'Blue Paragraph',
+		'style_handle'	=> 'block-styles-stylesheet',
+	)
+);
 ```
 
 Here's another example, adding an "Awesome Cover" style to the Cover block: 
 
 ```
-wp.blocks.registerBlockStyle( 'core/cover', {
-	name: 'awesome-cover',
-	label: 'Awesome Cover'
-} );
+register_block_style(
+	'core/cover',
+	array(
+		'name'			=> 'awesome-cover',
+		'label'			=> 'Awesome Cover',
+		'style_handle'	=> 'block-styles-stylesheet',
+	)
+);
 ```
 
-Those four lines are all you need to declare the new block style. The block name in the first line should refer to the official title for the block, but the `name` and `label` can follow whatever format you'd like. `name` will be used to generate a new classname for your block style, so please don't include any spaces there. 
+Those 8 lines are all you need to declare the new block style. The block name in the second line should refer to the official title for the block, but the `name` and `label` can follow whatever format you'd like. `name` will be used to generate a new classname for your block style, so please don't include any spaces there. 
 
-If you'd like to add multiple block styles in the same plugin, just duplicate those four lines.
+If you'd like to add multiple block styles in the same plugin, just duplicate those 8 lines.
 
 **2. From there, add the CSS to style your new block style.**
 
@@ -62,6 +70,11 @@ Open up the `style.css` file, and add any CSS styles for your block. Anything yo
 **3. Test your changes.**
 
 Zip up the plugin with your changes and upload to your site, or if you'd prefer, test the changes in real-time using the included [Docker-powered dev environment](DOCKER.md). 🎉
+
+## More Documentation
+
+- [Block Style Variations](https://developer.wordpress.org/block-editor/developers/filters/block-filters/#block-style-variations) in the Block Editor Handbook
+- [Server-side Registration Helper](https://developer.wordpress.org/block-editor/developers/filters/block-filters/#server-side-registration-helper) in the Block Editor Handbook (This is the method of registration used in these examples.)
 
 ## Questions? 
 

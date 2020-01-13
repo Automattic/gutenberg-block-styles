@@ -4,27 +4,37 @@
  * Plugin Name: Gutenberg Block Styles
  * Plugin URI: https://github.com/Automattic/gutenberg-block-styles/
  * Description: A simple plugin to demonstrate how to add block styles to Gutenberg.
- * Version: 1.0
- * Author: Kjell Reigstad
+ * Version: 1.1
+ * Author: Automattic
  */
 
 /**
- * Enqueue Block Styles Javascript
+ * Register Custom Block Styles
  */
-function block_styles_enqueue_javascript() {
-	wp_enqueue_script( 'block-styles-script',
-		plugins_url( 'block.js', __FILE__ ),
-		array( 'wp-blocks')
-	);
-}
-add_action( 'enqueue_block_editor_assets', 'block_styles_enqueue_javascript' );
+if ( function_exists( 'register_block_style' ) ) {
+	function block_styles_register_block_styles() {
+		/**
+		 * Register stylesheet
+		 */
+		wp_register_style(
+			'block-styles-stylesheet',
+			plugins_url( 'style.css', __FILE__ ),
+			array(),
+			'1.1'
+		);
 
-/**
- * Enqueue Block Styles Stylesheet
- */
-function block_styles_enqueue_stylesheet() {
-	wp_enqueue_style( 'block-styles-stylesheet',
-		plugins_url( 'style.css', __FILE__ ) 
-	);
+		/**
+		 * Register block style
+		 */
+		register_block_style(
+			'core/cover',
+			array(
+				'name'         => 'rotating-cover',
+				'label'        => 'Rotating Cover',
+				'style_handle' => 'block-styles-stylesheet',
+			)
+		);
+	}
+
+	add_action( 'init', 'block_styles_register_block_styles' );
 }
-add_action( 'enqueue_block_assets', 'block_styles_enqueue_stylesheet' );
