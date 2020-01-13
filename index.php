@@ -4,20 +4,9 @@
  * Plugin Name: Gutenberg Block Styles
  * Plugin URI: https://github.com/Automattic/gutenberg-block-styles/
  * Description: A simple plugin to demonstrate how to add block styles to Gutenberg.
- * Version: 1.0
+ * Version: 1.1
  * Author: Kjell Reigstad
  */
-
-/**
- * Enqueue Block Styles Javascript
- */
-function block_styles_enqueue_javascript() {
-	wp_enqueue_script( 'block-styles-script',
-		plugins_url( 'block.js', __FILE__ ),
-		array( 'wp-blocks')
-	);
-}
-add_action( 'enqueue_block_editor_assets', 'block_styles_enqueue_javascript' );
 
 /**
  * Enqueue Block Styles Stylesheet
@@ -28,3 +17,17 @@ function block_styles_enqueue_stylesheet() {
 	);
 }
 add_action( 'enqueue_block_assets', 'block_styles_enqueue_stylesheet' );
+
+/**
+ * Register Block Styles
+ */
+if ( function_exists( 'register_block_style' ) ) {
+	register_block_style(
+		'core/paragraph',
+		array(
+			'name'			=> 'blue-paragraph',
+			'label'			=> 'Blue Paragraph',
+			'style_handle'	=> 'block-styles-stylesheet',
+		)
+	);
+}
