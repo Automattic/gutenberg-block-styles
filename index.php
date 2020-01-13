@@ -37,18 +37,3 @@ if ( function_exists( 'register_block_style' ) ) {
 	}
 
 	add_action( 'init', 'block_styles_register_block_styles' );
-}
-
-/**
- * Register Block Styles
- */
-if ( function_exists( 'register_block_style' ) ) {
-	register_block_style(
-		'core/paragraph',
-		array(
-			'name'			=> 'blue-paragraph',
-			'label'			=> 'Blue Paragraph',
-			'style_handle'	=> 'block-styles-stylesheet',
-		)
-	);
-}
