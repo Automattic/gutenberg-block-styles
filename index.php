@@ -9,6 +9,35 @@
  */
 
 /**
+ * Register Custom Block Styles
+ */
+if ( function_exists( 'register_block_style' ) ) {
+	function block_styles_register_block_styles() {
+		/**
+		 * Register stylesheet
+		 */
+		wp_register_style(
+			'block-styles-stylesheet',
+			plugins_url( 'style.css', __FILE__ ),
+			array(),
+			'1.1'
+		);
+
+		/**
+		 * Register block style
+		 */
+		register_block_style(
+			'core/paragraph',
+			array(
+				'name'         => 'blue-paragraph',
+				'label'        => 'Blue Paragraph',
+				'style_handle' => 'block-styles-stylesheet',
+			)
+		);
+	}
+
+	add_action( 'init', 'block_styles_register_block_styles' );
+}
  * Enqueue Block Styles Stylesheet
  */
 function block_styles_enqueue_stylesheet() {
