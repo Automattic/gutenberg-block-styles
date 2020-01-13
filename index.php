@@ -38,14 +38,6 @@ if ( function_exists( 'register_block_style' ) ) {
 
 	add_action( 'init', 'block_styles_register_block_styles' );
 }
- * Enqueue Block Styles Stylesheet
- */
-function block_styles_enqueue_stylesheet() {
-	wp_enqueue_style( 'block-styles-stylesheet',
-		plugins_url( 'style.css', __FILE__ ) 
-	);
-}
-add_action( 'enqueue_block_assets', 'block_styles_enqueue_stylesheet' );
 
 /**
  * Register Block Styles
