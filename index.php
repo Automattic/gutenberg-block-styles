@@ -27,10 +27,10 @@ if ( function_exists( 'register_block_style' ) ) {
 		 * Register block style
 		 */
 		register_block_style(
-			'core/paragraph',
+			'core/gallery',
 			array(
-				'name'         => 'blue-paragraph',
-				'label'        => 'Blue Paragraph',
+				'name'         => 'rainfall',
+				'label'        => 'Rainfall',
 				'style_handle' => 'block-styles-stylesheet',
 			)
 		);
