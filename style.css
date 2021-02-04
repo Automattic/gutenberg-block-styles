@@ -3,8 +3,44 @@
  * If a theme's editor style specifies the same classname, these may be overwritten. 
  */
 
-.is-style-blue-paragraph {
-	background-color: #0087be;
-	color: #FFF;
-	padding: 16px;
+.is-style-jazz-cover {
+	position: relative;
+	transition: clip-path 0.2s;
+	clip-path: polygon(39% 45%, 36% 3%, 20% 4%, 20% 12%, 5% 10%, 0% 97%, 17% 98%, 20% 25%, 22% 90%, 36% 89%, 36% 96%, 53% 96%, 57% 59%, 57% 98%, 78% 98%, 78% 45%, 83% 89%, 100% 86%, 93% 2%, 74% 4%, 75% 19%, 60% 19%, 61% 1%, 43% 0%);
+}
+
+.is-style-jazz-cover img {
+	filter: grayscale(100%) contrast(200%);
+}
+
+.is-style-jazz-cover:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-image: url('./assets/noise.gif');
+	background-size: 2048px 2048px;
+	z-index: 500;
+	mix-blend-mode: exclusion;
+	filter: grayscale(100%) contrast(200%);
+}
+
+.is-style-jazz-cover:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: red;
+	z-index: 501;
+	opacity: 0.9;
+	filter: contrast(80%);
+	mix-blend-mode: multiply;
+}
+
+.is-style-jazz-cover:hover {
+  clip-path: polygon(37% 13%, 35% 0%, 16% 4%, 18% 12%, 6% 11%, 0% 97%, 21% 98%, 23% 71%, 26% 88%, 32% 87%, 32% 91%, 55% 93%, 58% 44%, 62% 95%, 83% 93%, 81% 47%, 74% 80%, 96% 82%, 100% 5%, 80% 3%, 79% 13%, 59% 15%, 60% 5%, 38% 3%);
 }
