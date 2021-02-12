@@ -75,13 +75,13 @@
 	}
 	.is-style-post-list-block-styles li:nth-child(3n+1) .wp-block-latest-posts__featured-image.visible {
 		/* @keyframes duration | easing-function | delay | iteration-count | direction | fill-mode | play-state | name */
-		animation: 0.7s ease-in-out 0.5s 1 normal forwards dropImage1;
+		animation: 0.7s ease-in-out 0.75s 1 normal forwards dropImage1;
 	}
 	.is-style-post-list-block-styles li:nth-child(3n+2) .wp-block-latest-posts__featured-image.visible {
-		animation: 0.7s ease-in-out 1s 1 normal forwards dropImage2;
+		animation: 0.7s ease-in-out 1.5s 1 normal forwards dropImage2;
 	}
 	.is-style-post-list-block-styles li:nth-child(3n+3) .wp-block-latest-posts__featured-image.visible {
-		animation: 0.7s ease-in-out 1.5s 1 normal forwards dropImage3;
+		animation: 0.7s ease-in-out 2.25s 1 normal forwards dropImage3;
 	}
 }
 
