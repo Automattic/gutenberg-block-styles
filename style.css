@@ -3,8 +3,156 @@
  * If a theme's editor style specifies the same classname, these may be overwritten. 
  */
 
-.is-style-blue-paragraph {
-	background-color: #0087be;
-	color: #FFF;
-	padding: 16px;
+.is-style-post-list-block-styles img{
+	vertical-align: middle;
+	filter: grayscale(100%) contrast(200%);	
+}
+
+.is-style-post-list-block-styles .wp-block-latest-posts__featured-image {
+	position: relative;
+}
+
+.is-style-post-list-block-styles .wp-block-latest-posts__featured-image:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-image: url('./assets/noise.gif');
+	background-size: 2048px 2048px;
+	z-index: 500;
+	mix-blend-mode: exclusion;
+	filter: grayscale(100%) contrast(200%);
+}
+
+.is-style-post-list-block-styles .wp-block-latest-posts__featured-image:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 501;
+	opacity: 0.9;
+	filter: contrast(80%);
+	mix-blend-mode: multiply;
+}
+
+.is-style-post-list-block-styles li:nth-child(4n+1) .wp-block-latest-posts__featured-image:after {
+	background-color: red;
+}
+
+.is-style-post-list-block-styles li:nth-child(4n+2) .wp-block-latest-posts__featured-image:after {
+	background-color: blue;
+}
+
+.is-style-post-list-block-styles li:nth-child(4n+3) .wp-block-latest-posts__featured-image:after {
+	background-color: green;
+}
+
+.is-style-post-list-block-styles li:nth-child(4n+4) .wp-block-latest-posts__featured-image:after {
+	background-color: yellow;
+}
+
+.is-style-post-list-block-styles li:nth-child(3n+1) .wp-block-latest-posts__featured-image {
+	rotate: 2deg;
+}
+
+.is-style-post-list-block-styles li:nth-child(3n+2) .wp-block-latest-posts__featured-image {
+	rotate: -2deg;
+}
+
+.is-style-post-list-block-styles li:nth-child(3n+3) .wp-block-latest-posts__featured-image {
+	rotate: 1deg;
+}
+
+/* The latest posts block goes to 1 column at this bp, we don't animate the images for mobile: */
+@media (min-width:600px) {
+	.is-style-post-list-block-styles .wp-block-latest-posts__featured-image {
+		opacity: 0;
+		translate: 0 -10%;
+	}
+	.is-style-post-list-block-styles li:nth-child(3n+1) .wp-block-latest-posts__featured-image.visible {
+		/* @keyframes duration | easing-function | delay | iteration-count | direction | fill-mode | play-state | name */
+		animation: 0.7s ease-in-out 0.5s 1 normal forwards dropImage1;
+	}
+	.is-style-post-list-block-styles li:nth-child(3n+2) .wp-block-latest-posts__featured-image.visible {
+		animation: 0.7s ease-in-out 1s 1 normal forwards dropImage2;
+	}
+	.is-style-post-list-block-styles li:nth-child(3n+3) .wp-block-latest-posts__featured-image.visible {
+		animation: 0.7s ease-in-out 1.5s 1 normal forwards dropImage3;
+	}
+}
+
+.editor-styles-wrapper .is-style-post-list-block-styles .wp-block-latest-posts__featured-image {
+	opacity: 1;
+	translate: 0;
+}
+
+
+@keyframes dropImage1 {
+	from {
+	  	opacity: 0;
+		translate: 0 -10%;
+		rotate: 2deg;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	75% {
+		translate: 0 0;
+	}
+  
+	to {
+		rotate: -2deg;
+		opacity: 1;
+		translate: 0;
+	}
+}
+
+@keyframes dropImage2 {
+	from {
+	  	opacity: 0;
+		translate: 0 -10%;
+		rotate: -2deg;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	75% {
+		translate: 0 0;
+	}
+  
+	to {
+		rotate: 2deg;
+		opacity: 1;
+		translate: 0;
+	}
+}
+
+@keyframes dropImage3 {
+	from {
+	  	opacity: 0;
+		translate: 0 -10%;
+		rotate: 1deg;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	75% {
+		translate: 0 0;
+	}
+  
+	to {
+		rotate: -1deg;
+		opacity: 1;
+		translate: 0;
+	}
 }

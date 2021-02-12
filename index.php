@@ -17,7 +17,7 @@ if ( function_exists( 'register_block_style' ) ) {
 		 * Register stylesheet
 		 */
 		wp_register_style(
-			'block-styles-stylesheet',
+			'post-list-block-styles-stylesheet',
 			plugins_url( 'style.css', __FILE__ ),
 			array(),
 			'1.1'
@@ -27,13 +27,16 @@ if ( function_exists( 'register_block_style' ) ) {
 		 * Register block style
 		 */
 		register_block_style(
-			'core/paragraph',
+			'core/latest-posts',
 			array(
-				'name'         => 'blue-paragraph',
-				'label'        => 'Blue Paragraph',
-				'style_handle' => 'block-styles-stylesheet',
+				'name'         => 'post-list-block-styles',
+				'label'        => 'Colored Posts',
+				'style_handle' => 'post-list-block-styles-stylesheet',
 			)
 		);
+
+		wp_enqueue_script( 'posts-animation', get_template_directory_uri() . '/posts-animation.js', array(), '1.0', false );
+
 	}
 
 	add_action( 'init', 'block_styles_register_block_styles' );
