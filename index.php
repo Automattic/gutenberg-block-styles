@@ -27,10 +27,10 @@ if ( function_exists( 'register_block_style' ) ) {
 		 * Register block style
 		 */
 		register_block_style(
-			'core/paragraph',
+			'core/query',
 			array(
-				'name'         => 'blue-paragraph',
-				'label'        => 'Blue Paragraph',
+				'name'         => 'inline-query',
+				'label'        => 'Inline Query',
 				'style_handle' => 'block-styles-stylesheet',
 			)
 		);
@@ -38,3 +38,21 @@ if ( function_exists( 'register_block_style' ) ) {
 
 	add_action( 'init', 'block_styles_register_block_styles' );
 }
+
+/**
+ * Register Custom Block Pattern
+ */
+register_block_pattern(
+	'query/small-inline-posts',
+	array(
+		'title'      => __( 'Inline with small images', 'gutenberg' ),
+		'blockTypes' => array( 'core/query' ),
+		'categories' => array( 'Query' ),
+		'content'    => '<!-- wp:query {"query":{"perPage":10,"pages":0,"offset":0,"postType":"post","categoryIds":[],"tagIds":[],"order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true},"layout":{"type":"list"},"className":"is-style-inline-query"} -->
+						<!-- wp:query-loop -->
+						<!-- wp:post-featured-image {"isLink":true} /-->
+						<!-- wp:post-title {"isLink":true,"style":{"typography":{"fontSize":"42px","lineHeight":"1.4"}}} /-->
+						<!-- /wp:query-loop -->
+						<!-- /wp:query -->',
+	)
+);

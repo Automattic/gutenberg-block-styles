@@ -3,8 +3,37 @@
  * If a theme's editor style specifies the same classname, these may be overwritten. 
  */
 
-.is-style-blue-paragraph {
-	background-color: #0087be;
-	color: #FFF;
-	padding: 16px;
+.is-style-inline-query .wp-block-query-loop * {
+	display: inline !important;
+}
+
+.is-style-inline-query .wp-block-query-loop ul li {
+	clear: initial;
+	margin: 0px;
+}
+
+.is-style-inline-query .wp-block-post-featured-image {
+	display: inline-block !important;
+	width: 50px;
+	margin-right: 0.75em !important;
+}
+
+.is-style-inline-query .wp-block-post-title {
+	margin: 0 0.4em 0 0 !important;
+}
+
+.is-style-inline-query .wp-block-post-title a:after {
+	content: ",";
+}
+
+.is-style-inline-query .wp-block-query-loop li:last-child .wp-block-post-title a:after {
+	content: "";
+}
+
+.is-style-inline-query .wp-block-post-title a {
+	text-decoration: none;
+}
+
+.is-style-inline-query .wp-block.block-editor-default-block-appender {
+	display: none !important;
 }
