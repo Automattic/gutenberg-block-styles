@@ -26,33 +26,36 @@ Adding + editing block styles is a three step process:
 
 For example, the built-in example adds a "Blue Paragraph" block style to the core Paragraph block: 
 
-```
+```php
 register_block_style(
-	'core/paragraph',
-	array(
-		'name'			=> 'blue-paragraph',
-		'label'			=> 'Blue Paragraph',
-		'style_handle'	=> 'block-styles-stylesheet',
+	'core/paragraph', // Block type name "cover" including namespace "core"
+	array(            // Properties of the style
+		'name'         => 'blue-paragraph',
+		'label'        => 'Blue Paragraph',
+		'style_handle' => 'block-styles-stylesheet',
 	)
 );
 ```
 
 Here's another example, adding an "Awesome Cover" style to the Cover block: 
 
-```
+```php
 register_block_style(
-	'core/cover',
-	array(
-		'name'			=> 'awesome-cover',
-		'label'			=> 'Awesome Cover',
-		'style_handle'	=> 'block-styles-stylesheet',
+	'core/cover', // Block type name "cover" including namespace "core"
+	array(        // Properties of the style
+		'name'         => 'awesome-cover',
+		'label'        => 'Awesome Cover',
+		'style_handle' => 'block-styles-stylesheet',
 	)
 );
 ```
 
-Those 8 lines are all you need to declare the new block style. The block name in the second line should refer to the official title for the block, but the `name` and `label` can follow whatever format you'd like. `name` will be used to generate a new classname for your block style, so please don't include any spaces there. 
+* The block name in the second line should refer to the official title for the block.
+* The `name` Property should be lowercase letters with hyphens. It is used to generate the class for your block style.
+* The `label` Property should be human readable, and probably translatable.
+* The `style_handle` Property needs to be the handle of a style previously registered using `wp_register_style()`
 
-If you'd like to add multiple block styles in the same plugin, just duplicate those 8 lines.
+If you'd like to add multiple block styles in the same plugin, duplicate those 8 lines and replace the Properties.
 
 **2. From there, add the CSS to style your new block style.**
 
