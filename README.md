@@ -28,7 +28,7 @@ For example, the built-in example adds a "Blue Paragraph" block style to the cor
 
 ```php
 register_block_style(
-	'core/paragraph', // Block type name "cover" including namespace "core"
+	'core/paragraph', // Block type name "paragraph" including namespace "core"
 	array(            // Properties of the style
 		'name'         => 'blue-paragraph',
 		'label'        => 'Blue Paragraph',
